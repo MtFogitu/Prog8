@@ -1,18 +1,17 @@
-def str_sort(str):
-    str = str.lower()
-    str = str.split(' ')
-    str_len = []
-    for s in str:
-        str_len.append((len(s), s))
-    print(str_len)
-    str_len = sort(str_len)
-    str = []
-    for s in str_len:
-        str.append(s[1])
-    str = " ".join(str)
-    str = str.capitalize()
+def sort_sentence(sentence):
+    sentence = sentence.lower()
+    sentence = sentence.split(' ')
+    sentence_len = []
+    for s in sentence:
+        sentence_len.append((len(s), s))
+    sentence_len = sort(sentence_len)
+    sentence = []
+    for s in sentence_len:
+        sentence.append(s[1])
+    sentence = " ".join(sentence)
+    sentence = sentence.capitalize()
 
-    return str
+    return sentence
 
 
 def sort(array):
@@ -37,6 +36,6 @@ def sort(array):
     else:
         return array
 
-if __name___=='__main__':
-	str = "Keep calm and carry on"
-	print(str_sort(str))
+if __name__ == "__main__":
+    sentence = "Keep calm and carry on"
+    print(sort_sentence(sentence))
